@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    color: #e0d8d8;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.form-wrapper {
+    min-height: 100vh;
+    background-color: #0e0e0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Card */
+.note-card {
+    background: rgb(48, 45, 90);
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Titles */
+.card-title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+.card-subtitle {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #cfc9ff;
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #d6d2ff;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #6c63ff55;
+    background: #1a1833;
+    color: #ffffff;
+    font-size: 14px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+/* Button */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #5f72ff, #9b5cff);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.35);
+}

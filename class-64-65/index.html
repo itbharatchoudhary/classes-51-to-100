@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Concepts Interactive Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>JavaScript Concepts — Interactive Learning</h1>
+
+        <!-- ============================
+       1. Debounce
+  ============================= -->
+        <section id="topic1">
+            <h2>1. Debounce Example</h2>
+            <input type="text" id="search" placeholder="Type to search..." />
+            <p class="note">Only one API call will trigger after 500ms.</p>
+            <div class="output" id="debounceOutput"></div>
+        </section>
+
+        <!-- ============================
+       2. Throttle
+  ============================= -->
+        <section id="topic2">
+            <h2>2. Throttle Example</h2>
+            <button id="submit">Click Fast</button>
+            <p class="note">Button can be clicked only once per second.</p>
+            <div class="output" id="throttleOutput"></div>
+        </section>
+
+        <!-- ============================
+       3. JSON.stringify()
+  ============================= -->
+        <section id="topic3">
+            <h2>3. JSON.stringify()</h2>
+            <pre class="code-block">
+const user = { name: "Anubhav", age: 24 };
+console.log(JSON.stringify(user));
+    </pre>
+            <div class="output" id="jsonStringifyOutput"></div>
+        </section>
+
+        <!-- ============================
+       4. JSON.parse()
+  ============================= -->
+        <section id="topic4">
+            <h2>4. JSON.parse()</h2>
+            <pre class="code-block">
+const json = '{"name":"Anubhav","age":24}';
+console.log(JSON.parse(json));
+    </pre>
+            <div class="output" id="jsonParseOutput"></div>
+        </section>
+
+        <!-- ============================
+       5. LocalStorage
+  ============================= -->
+        <section id="topic5">
+            <h2>5. LocalStorage Example</h2>
+            <button id="saveData">Save Score</button>
+            <button id="loadData">Load Score</button>
+            <div class="output" id="localOutput"></div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

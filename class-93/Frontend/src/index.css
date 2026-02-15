@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 200%;
+  width: 100%;
+}
+
+body {
+  background-color: #0e0e0e;
+  color:floralwhite;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.Notes-Heading {
+  padding-top: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 5rem;
+  letter-spacing: 2px;
+}
+/* Container for all notes */
+.Notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+
+  align-items: flex-start; /* prevents height stretching */
+}
+
+/* Each note card */
+.Note {
+  flex: 0 0 calc(25% - 20px); /* 4 cards per row */
+  max-width: calc(25% - 20px);
+
+  padding: 16px;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  text-transform: capitalize;
+}
+
+/* Hover effect */
+.Note:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Title */
+.Note h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* Description */
+.Note p {
+  margin: 0;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .Note {
+    flex: 0 0 calc(33.33% - 20px); /* 3 cards */
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .Note {
+    flex: 0 0 calc(50% - 20px); /* 2 cards */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .Note {
+    flex: 0 0 100%; /* 1 card */
+    max-width: 100%;
+  }
+}
