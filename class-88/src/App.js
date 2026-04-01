@@ -1,41 +1,33 @@
-const express = require('express');
+const express = require("express");
 
-const App = express();
-App.use(express.json());
+const app = express();   // server create ho jata hai
 
-const notes =[
-    // {
-    //     title:"My first note",
-    //     content:"This is the content of my first note."
-    // }
- ]
+app.use(express.json());
 
-App.get('/', (req, res) => {
-  res.send('Welcome to the Notes API');
-});
+const notes = []
 
-App.post('/notes', (req, res) => {
-    console.log(req.body);
+app.post("/notes", (req, res) => {
     notes.push(req.body);
-    console.log(notes);
-    res.send('Note created successfully');
-});
+    res.send("Note create successfully")
+})
 
-App.get('/notes', (req, res) => {
-  res.json(notes);
-});
+app.get("/notes", (req, res) => {
+    res.send(notes);
+})
 
-App.delete('/notes/:id', (req, res) => {
-    delete notes[req.params.id];
-    res.send('Delete note endpoint');
-});
+app.delete("/notes/:index", (req, res) => {
+    delete notes[req.params.index]
+    res.send("Note delete successfully")
+})
 
-App.patch('/notes/:id', (req, res) => {
- notes[req.params.id].content = req.body.content;
-    res.send('Update note endpoint');
-});
+app.patch("/notes/:index", (req, res) => {
+    notes[req.params.index].Description = req.body.Description
+    res.send("Note update successfully")
+})
+
+app.get("/", (req, res) => {
+    res.send("hello world")
+})
 
 
-
-
-module.exports = App;
+module.exports = app;
