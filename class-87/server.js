@@ -9,16 +9,14 @@ const notes = []
 app.post("/notes", (req, res) => {
     console.log(req.body);
     notes.push(req.body);
-    res.send("Note create successfully");
+    res.send("Notes Create successfully");
+})
 
-});
-
-app.get("/notes",(req,res)=>{
+app.get("/notes", (req, res) => {
     res.send(notes);
 })
 
 app.listen(3000, (req, res) => {
-    console.log("Server Running successful");
+    console.log("Server running successfully");
 });
-
 

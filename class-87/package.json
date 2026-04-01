@@ -1,11 +1,10 @@
 {
   "name": "class-87",
   "version": "1.0.0",
-  "description": "REST (Representational State Transfer) ek architectural style hai jo web services design karne ke liye use hota hai. Yeh lightweight, scalable aur simple communication pattern provide karta hai between client (frontend/app) aur server (backend).",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
